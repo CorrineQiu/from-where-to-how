@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="From Where to How predicts where future interactions will occur in continuous 3D space and how the full body will move from egocentric video.">
+  <meta name="author" content="Qiaohui Chu, Haoyu Zhang, Meng Liu, Haoxiang Shi, Dongmei Jiang, Liqiang Nie">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="From Where to How">
+  <meta property="og:description" content="Continuous 4D interaction forecasting from egocentric video with Coherent4D and HIGFlow.">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#f8fafc">
+  <title>From Where to How: Continuous 4D Interaction Forecasting from Egocentric Video</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="./styles.css">
+  <style id="dataset-critical-layout">
+    #dataset .stat-card {
+      display: grid !important;
+      place-items: center !important;
+      text-align: center !important;
+    }
+    #dataset .stat-card::after {
+      display: none !important;
+    }
+    #dataset .stat-card-content {
+      display: grid !important;
+      place-items: center !important;
+      width: 100% !important;
+      margin: auto !important;
+      text-align: center !important;
+    }
+    #dataset .stat-card-content > strong,
+    #dataset .stat-card-content > span {
+      width: 100% !important;
+      text-align: center !important;
+    }
+    #dataset .paper-table-heading.dataset-module-heading {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: baseline !important;
+      gap: 0 !important;
+      background-color: #f1efff !important;
+      background-image: linear-gradient(100deg, #f1efff 0%, #edf9f7 100%) !important;
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to content</a>
+
+  <header class="hero" id="top">
+    <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <h1 class="wordmark wordmark-long" aria-label="From Where to How">
+        <span class="wordmark-lead">
+          <span>From</span>
+          <span>Where</span>
+        </span>
+        <span class="wordmark-tail">
+          <span class="wordmark-to" aria-hidden="true">
+            <svg class="wordmark-to-svg" viewBox="-64 -1424 2056 1504"
+                 preserveAspectRatio="xMidYMid meet" overflow="visible" focusable="false">
+              <defs>
+                <linearGradient id="wordmark-to-gradient" gradientUnits="userSpaceOnUse"
+                                x1="0" y1="0" x2="1912" y2="0">
+                  <stop offset="0" stop-color="#7567d9" />
+                  <stop offset="1" stop-color="#75bd67" />
+                </linearGradient>
+              </defs>
+              <g fill="url(#wordmark-to-gradient)" transform="scale(1 -1)">
+                <path d="M740.89 1056V803.82H18.36V1056ZM199.64 1344H524.2V343.36Q524.2 291.77 545 271.97Q565.79 252.18 624.07 252.18Q649.76 252.18 686.34 252.18Q722.92 252.18 740.89 252.18V0Q714.22 0 662.05 0Q609.88 0 555.66 0Q371.27 0 285.46 70.25Q199.64 140.5 199.64 290.42Z" />
+                <path transform="translate(762 0)" d="M602.32 -24Q439.52 -24 315.92 44.48Q192.31 112.97 123.42 236.97Q54.53 360.97 54.53 527.34Q54.53 694.05 123.42 818.04Q192.31 942.03 315.92 1011.02Q439.52 1080 602.32 1080Q766.12 1080 889.22 1011.02Q1012.33 942.03 1081.22 818.04Q1150.11 694.05 1150.11 527.34Q1150.11 360.97 1081.22 236.97Q1012.33 112.97 889.22 44.48Q766.12 -24 602.32 -24ZM602.32 236.18Q667.38 236.18 716.87 270.39Q766.37 304.61 794.29 369.92Q822.21 435.22 822.21 527.34Q822.21 620.79 794.29 685.76Q766.37 750.74 716.87 785.28Q667.38 819.82 602.32 819.82Q538.26 819.82 488.27 785.44Q438.27 751.06 410.35 685.93Q382.43 620.79 382.43 527.34Q382.43 434.9 410.35 369.75Q438.27 304.61 488.1 270.39Q537.94 236.18 602.32 236.18Z" />
+              </g>
+            </svg>
+          </span>
+          <span class="wordmark-how">How</span>
+        </span>
+      </h1>
+      <p class="hero-subtitle">Continuous 4D Interaction Forecasting from Egocentric Video</p>
+      <p class="hero-summary">
+        Predicting <strong>where</strong> future interactions will occur in continuous 3D space and
+        <strong>how</strong> the full body will move to complete the action.
+      </p>
+      <div class="author-line author-list" aria-label="Authors">
+        <span>Qiaohui Chu<sup>1,2</sup></span>
+        <span class="author-separator" aria-hidden="true">·</span>
+        <span>Haoyu Zhang<sup>1,2</sup></span>
+        <span class="author-separator" aria-hidden="true">·</span>
+        <span>Meng Liu<sup>3,*</sup></span>
+        <span class="author-separator" aria-hidden="true">·</span>
+        <span>Haoxiang Shi<sup>1,2</sup></span>
+        <span class="author-separator" aria-hidden="true">·</span>
+        <span>Dongmei Jiang<sup>2</sup></span>
+        <span class="author-separator" aria-hidden="true">·</span>
+        <span>Liqiang Nie<sup>1,*</sup></span>
+      </div>
+      <div class="affiliation-line">
+        <span><sup>1</sup> Harbin Institute of Technology (Shenzhen)</span>
+        <span><sup>2</sup> Pengcheng Laboratory</span>
+        <span><sup>3</sup> Shandong University</span>
+        <span><sup>*</sup> Corresponding authors</span>
+      </div>
+      <div class="resource-row" aria-label="Project resources">
+        <span class="resource-button is-disabled" aria-disabled="true">
+          <span class="button-icon" aria-hidden="true">↗</span> Paper coming soon
+        </span>
+        <span class="resource-button is-disabled" aria-disabled="true">
+          <span class="button-icon" aria-hidden="true">⌘</span> Code coming soon
+        </span>
+      </div>
+      <div class="hero-tags" aria-label="Project components">
+        <span>Coherent4D Dataset</span>
+        <span>HIGFlow Framework</span>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#abstract" aria-label="Go to abstract">
+      <span>Explore</span><span aria-hidden="true">↓</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="section section-tint" id="abstract">
+      <div class="container narrow reveal">
+        <div class="section-heading centered">
+          <h2>Abstract</h2>
+          <span class="title-rule" aria-hidden="true"></span>
+        </div>
+        <div class="abstract-copy">
+          <p>
+            Egocentric 4D interaction forecasting aims to anticipate both <em>where</em> future
+            interactions will occur in 3D and <em>how</em> the human body will move to realize them,
+            providing an important capability for assistive robotics and human–computer interaction.
+            Existing methods typically model interaction localization and full-body motion separately,
+            or represent interaction locations using discrete spatial grids, leaving their continuous
+            temporal and geometric correspondence insufficiently modeled. In addition, accurate
+            interaction forecasting requires jointly capturing task semantics, metric localization,
+            and short-horizon visual dynamics, while stochastic pose forecasting must balance motion
+            diversity with structural consistency. To address these challenges, we introduce
+            <em>Coherent4D</em>, a large-scale egocentric dataset for continuous 4D interaction
+            forecasting, comprising approximately 233K samples across Cooking, Health, and Bike Repair.
+            Each sample pairs an ordered sequence of future 3D interaction locations with temporally
+            aligned full-body poses in a shared coordinate system, together with continuous-space
+            evaluation metrics. Building on this formulation, we propose <em>HIGFlow</em>, a
+            Hand-Interaction-Guided Residual Flow framework that models forecasting as a cascaded
+            <em>where-to-how</em> process. HIGFlow first predicts continuous future interaction
+            locations by combining semantic grounding with short-horizon visual dynamics, and then
+            uses the predicted location sequence to condition a deterministic motion anchor and
+            residual Flow Matching for diverse yet structurally consistent full-body motion forecasting.
+            Extensive experiments across all three domains demonstrate consistent improvements over
+            representative baselines on both interaction-location and pose forecasting, while ablations
+            validate the contributions of the proposed components.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dataset">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <h2>Dataset</h2>
+          <span class="title-rule" aria-hidden="true"></span>
+          <p class="section-intro">
+            Coherent4D organizes future hand locations and SMPL states as timestamp-aligned
+            sequences in a shared coordinate system.
+          </p>
+        </div>
+
+        <div class="stat-grid reveal" aria-label="Coherent4D statistics">
+          <article class="stat-card">
+            <div class="stat-card-content">
+              <strong>233,828</strong><span>forecasting samples</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card-content">
+              <strong>21</strong><span>procedural tasks</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card-content">
+              <strong>787</strong><span>unique takes</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-card-content">
+              <strong>535</strong><span>object categories</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="dataset-feature reveal">
+          <figure class="figure-card figure-card-compact">
+            <img src="assets/dataset_distribution.png"
+                 alt="Coherent4D domain and task distribution across Cooking, Bike Repair, and Health."
+                 width="1012" height="912" data-lightbox loading="lazy">
+          </figure>
+          <div class="feature-copy">
+            <h3>Domain and Task Coverage</h3>
+            <p>
+              Coherent4D spans Cooking, Bike Repair, and Health, combining frequent manipulation
+              routines with domain-specific long-horizon activities.
+            </p>
+            <div class="domain-list">
+              <div><span class="domain-dot cooking"></span><strong>Cooking</strong><em>71.0%</em></div>
+              <div><span class="domain-dot bike"></span><strong>Bike Repair</strong><em>17.2%</em></div>
+              <div><span class="domain-dot health"></span><strong>Health</strong><em>11.8%</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dataset-module-stack">
+        <div class="paper-table-card dataset-stats-card reveal">
+          <div class="paper-table-heading dataset-module-heading">
+            <h3>Training and evaluation splits</h3>
+          </div>
+          <div class="table-scroll">
+            <table class="paper-table dataset-stats-table">
+              <thead>
+                <tr>
+                  <th scope="col">Domain</th>
+                  <th scope="col">Horizon</th>
+                  <th scope="col">Takes</th>
+                  <th scope="col">Train</th>
+                  <th scope="col">Val</th>
+                  <th scope="col">Test</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Targets</th>
+                  <th scope="col">Obj.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Cooking</th>
+                  <td>10</td><td>331</td><td>136,079</td><td>15,435</td><td>14,527</td>
+                  <td>166,041</td><td>1,337,589</td><td>428</td>
+                </tr>
+                <tr>
+                  <th scope="row">Health</th>
+                  <td>5</td><td>205</td><td>21,532</td><td>1,899</td><td>4,167</td>
+                  <td>27,598</td><td>114,964</td><td>170</td>
+                </tr>
+                <tr>
+                  <th scope="row">Bike Repair</th>
+                  <td>4</td><td>251</td><td>35,987</td><td>3,150</td><td>1,052</td>
+                  <td>40,189</td><td>141,633</td><td>197</td>
+                </tr>
+                <tr class="total-row">
+                  <th scope="row">Total</th>
+                  <td>&mdash;</td><td>787</td><td>193,598</td><td>20,484</td><td>19,746</td>
+                  <td>233,828</td><td>1,594,186</td><td>535</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dataset-grid reveal">
+          <figure class="figure-card">
+            <div class="paper-table-heading dataset-module-heading">
+              <h3>Verb diversity</h3>
+            </div>
+            <div class="dataset-chart-frame">
+              <img src="assets/verb_distribution.png"
+                   alt="Top narration verbs for all future interaction targets, stacked by domain."
+                   width="1112" height="755" data-lightbox loading="lazy">
+            </div>
+            <figcaption>
+              Common manipulation primitives include pick, place, hold, drop, move, pour, and turn,
+              with complementary patterns across domains.
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card">
+            <div class="paper-table-heading dataset-module-heading">
+              <h3>Task distribution</h3>
+            </div>
+            <div class="dataset-chart-frame">
+              <img src="assets/task_distribution_top15.png"
+                   alt="Top 15 Coherent4D procedural tasks and the aggregated Other group, stacked by domain."
+                   width="1478" height="744" data-lightbox loading="lazy">
+            </div>
+            <figcaption>
+              The top 15 procedural tasks and the aggregated Other group are stacked by Cooking,
+              Bike Repair, and Health to show both frequent routines and long-tail coverage.
+            </figcaption>
+          </figure>
+        </div>
+
+        <figure class="figure-card figure-card-wide dataset-sample-card reveal">
+          <div class="paper-table-heading dataset-module-heading">
+            <h3>A sample of Coherent4D</h3>
+          </div>
+          <img src="assets/dataset_example.png"
+               alt="A Coherent4D example with synchronized views, ordered body poses, object boxes, and an action timeline."
+               width="1565" height="618" data-lightbox loading="lazy">
+          <figcaption>
+            A representative sequence combines scene geometry, semantic object extents, ordered
+            hand interaction targets, and temporally aligned SMPL states. The timeline preserves
+            both the target object and the metric evolution of the future interaction.
+          </figcaption>
+        </figure>
+
+        <div class="video-comparison-grid reveal" aria-label="Paired Coherent4D video example">
+          <figure class="figure-card video-card">
+            <div class="paper-table-heading dataset-module-heading">
+              <h3>Original video</h3>
+            </div>
+            <video controls muted loop playsinline preload="metadata"
+                   poster="assets/iiith_cooking_58_2_idx6839_original_poster.jpg">
+              <source src="iiith_cooking_58_2_idx6839_original_switchcam.mp4" type="video/mp4">
+              Your browser does not support embedded MP4 video.
+            </video>
+          </figure>
+
+          <figure class="figure-card video-card">
+            <div class="paper-table-heading dataset-module-heading">
+              <h3>Visualization</h3>
+            </div>
+            <video controls muted loop playsinline preload="metadata"
+                   poster="assets/iiith_cooking_58_2_idx6839_pose_poster.jpg">
+              <source src="iiith_cooking_58_2_idx6839_rendered_continuous_pose.mp4" type="video/mp4">
+              Your browser does not support embedded MP4 video.
+            </video>
+          </figure>
+        </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-tint" id="framework">
+      <div class="container reveal">
+        <div class="section-heading centered">
+          <h2>Method</h2>
+          <span class="title-rule" aria-hidden="true"></span>
+          <p class="section-intro">
+            HIGFlow couples continuous interaction localization with temporally aligned full-body
+            motion forecasting in a two-stage pipeline.
+          </p>
+        </div>
+
+        <figure class="figure-card figure-card-wide">
+          <img src="assets/framework.png"
+               alt="HIGFlow framework with an interaction prediction stage and a hand-guided pose forecasting stage."
+               width="1569" height="658" data-lightbox loading="eager">
+          <figcaption>
+            <strong>HIGFlow overview.</strong> Stage 1 fuses semantic context from Qwen3-VL with
+            short-horizon dynamics from V-JEPA to predict continuous future hand locations. Stage 2
+            uses that ordered location sequence to guide a deterministic pose anchor and bounded
+            residual Flow Matching.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <h2>Experiments</h2>
+          <span class="title-rule" aria-hidden="true"></span>
+          <p class="section-intro">
+            HIGFlow improves continuous interaction localization and global pose forecasting across
+            all three Coherent4D domains.
+          </p>
+        </div>
+
+        <div class="paper-table-card main-result-table reveal">
+          <div class="paper-table-heading">
+            <h3>Interaction location forecasting</h3>
+          </div>
+          <div class="table-scroll">
+            <table class="paper-table interaction-table">
+              <thead>
+                <tr>
+                  <th scope="col" rowspan="2">Model</th>
+                  <th class="domain-head health-head" scope="colgroup" colspan="3">Health</th>
+                  <th class="domain-head bike-head" scope="colgroup" colspan="3">Bike Repair</th>
+                  <th class="domain-head cooking-head" scope="colgroup" colspan="3">Cooking</th>
+                </tr>
+                <tr>
+                  <th scope="col">ADE</th><th scope="col">ADE<sub>90</sub></th><th scope="col">FDE</th>
+                  <th scope="col">ADE</th><th scope="col">ADE<sub>90</sub></th><th scope="col">FDE</th>
+                  <th scope="col">ADE</th><th scope="col">ADE<sub>90</sub></th><th scope="col">FDE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">FIction</th>
+                  <td><span class="second">40.30</span></td><td><span class="second">62.62</span></td><td><strong>40.58</strong></td>
+                  <td>88.55</td><td>143.21</td><td>98.61</td>
+                  <td><span class="second">100.61</span></td><td><span class="second">184.63</span></td><td><span class="second">107.11</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Qwen3-VL</th>
+                  <td>57.53</td><td>89.54</td><td>82.04</td>
+                  <td>90.71</td><td>156.55</td><td>103.81</td>
+                  <td>103.95</td><td>199.20</td><td>112.22</td>
+                </tr>
+                <tr>
+                  <th scope="row">V-JEPA</th>
+                  <td>45.18</td><td>69.49</td><td>46.26</td>
+                  <td><span class="second">86.50</span></td><td><span class="second">142.43</span></td><td><span class="second">96.33</span></td>
+                  <td>102.33</td><td>194.80</td><td>107.35</td>
+                </tr>
+                <tr>
+                  <th scope="row">Diff-IP3D</th>
+                  <td>292.84</td><td>433.26</td><td>294.25</td>
+                  <td>525.63</td><td>842.93</td><td>561.19</td>
+                  <td>647.23</td><td>1268.28</td><td>662.71</td>
+                </tr>
+                <tr>
+                  <th scope="row">MMTwin</th>
+                  <td>290.45</td><td>437.88</td><td>285.21</td>
+                  <td>429.71</td><td>690.80</td><td>480.29</td>
+                  <td>513.75</td><td>957.17</td><td>556.40</td>
+                </tr>
+                <tr class="method-row">
+                  <th scope="row">HIGFlow</th>
+                  <td><strong>40.21</strong></td><td><strong>59.52</strong></td><td><span class="second">41.44</span></td>
+                  <td><strong>80.91</strong></td><td><strong>131.87</strong></td><td><strong>93.78</strong></td>
+                  <td><strong>93.46</strong></td><td><strong>178.20</strong></td><td><strong>104.26</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">
+            Interaction location errors on Coherent4D are reported in millimeters. Lower is better.
+            Bold and underline denote the best and second-best results.
+          </p>
+        </div>
+
+        <div class="paper-table-card main-result-table reveal">
+          <div class="paper-table-heading">
+            <h3>Full-body pose forecasting</h3>
+          </div>
+          <div class="table-scroll">
+            <table class="paper-table pose-table">
+              <thead>
+                <tr>
+                  <th scope="col" rowspan="2">Model</th>
+                  <th scope="colgroup" colspan="2">MPJPE</th>
+                  <th scope="colgroup" colspan="2">PA-MPJPE</th>
+                  <th scope="colgroup" colspan="2">Root Trans.</th>
+                  <th scope="colgroup" colspan="2">Body Geo.</th>
+                </tr>
+                <tr>
+                  <th scope="col">Single</th><th scope="col">Best-5</th>
+                  <th scope="col">Single</th><th scope="col">Best-5</th>
+                  <th scope="col">Single</th><th scope="col">Best-5</th>
+                  <th scope="col">Single</th><th scope="col">Best-5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="domain-row health-head"><th colspan="9" scope="rowgroup">Health</th></tr>
+                <tr>
+                  <th scope="row">FIction</th>
+                  <td><span class="second">117.17</span></td><td>115.91</td>
+                  <td><strong>42.12</strong></td><td><span class="second">42.01</span></td>
+                  <td><span class="second">104.09</span></td><td>102.91</td>
+                  <td><span class="second">9.03</span></td><td>9.02</td>
+                </tr>
+                <tr>
+                  <th scope="row">SkeletonDiffusion</th>
+                  <td>166.32</td><td>137.39</td><td>53.18</td><td>52.19</td>
+                  <td>158.85</td><td>138.47</td><td>10.55</td><td>10.45</td>
+                </tr>
+                <tr>
+                  <th scope="row">SLD-HMP</th>
+                  <td>2070.93</td><td><strong>92.47</strong></td><td>86.06</td><td><strong>32.91</strong></td>
+                  <td>2053.66</td><td><span class="second">79.23</span></td><td>24.11</td><td><strong>5.67</strong></td>
+                </tr>
+                <tr class="method-row">
+                  <th scope="row">HIGFlow</th>
+                  <td><strong>95.25</strong></td><td><span class="second">93.45</span></td>
+                  <td><span class="second">43.79</span></td><td>43.66</td>
+                  <td><strong>80.93</strong></td><td><strong>79.06</strong></td>
+                  <td><strong>8.80</strong></td><td><span class="second">8.79</span></td>
+                </tr>
+
+                <tr class="domain-row bike-head"><th colspan="9" scope="rowgroup">Bike Repair</th></tr>
+                <tr>
+                  <th scope="row">FIction</th>
+                  <td><span class="second">295.34</span></td><td>284.52</td>
+                  <td><span class="second">78.95</span></td><td>78.24</td>
+                  <td>292.07</td><td>279.21</td><td><span class="second">13.60</span></td><td><span class="second">13.50</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">SkeletonDiffusion</th>
+                  <td>453.52</td><td>370.26</td><td>113.22</td><td>109.63</td>
+                  <td>405.49</td><td>331.24</td><td>17.69</td><td>17.44</td>
+                </tr>
+                <tr>
+                  <th scope="row">SLD-HMP</th>
+                  <td>314.15</td><td><span class="second">280.81</span></td>
+                  <td>80.41</td><td><span class="second">74.47</span></td>
+                  <td><span class="second">289.53</span></td><td><span class="second">247.85</span></td>
+                  <td><strong>12.45</strong></td><td><strong>11.49</strong></td>
+                </tr>
+                <tr class="method-row">
+                  <th scope="row">HIGFlow</th>
+                  <td><strong>213.65</strong></td><td><strong>210.09</strong></td>
+                  <td><strong>70.07</strong></td><td><strong>70.03</strong></td>
+                  <td><strong>224.19</strong></td><td><strong>220.18</strong></td>
+                  <td>15.05</td><td>15.05</td>
+                </tr>
+
+                <tr class="domain-row cooking-head"><th colspan="9" scope="rowgroup">Cooking</th></tr>
+                <tr>
+                  <th scope="row">FIction</th>
+                  <td><span class="second">237.86</span></td><td><span class="second">226.62</span></td>
+                  <td><span class="second">43.81</span></td><td>43.76</td>
+                  <td><span class="second">227.23</span></td><td><span class="second">214.75</span></td>
+                  <td><span class="second">8.34</span></td><td>8.34</td>
+                </tr>
+                <tr>
+                  <th scope="row">SkeletonDiffusion</th>
+                  <td>310.39</td><td>260.00</td><td>51.43</td><td>51.25</td>
+                  <td>278.05</td><td>229.97</td><td>11.42</td><td>11.41</td>
+                </tr>
+                <tr>
+                  <th scope="row">SLD-HMP</th>
+                  <td>396.31</td><td>298.33</td><td>48.95</td><td><span class="second">42.72</span></td>
+                  <td>362.71</td><td>270.81</td><td>8.82</td><td><strong>7.48</strong></td>
+                </tr>
+                <tr class="method-row">
+                  <th scope="row">HIGFlow</th>
+                  <td><strong>143.98</strong></td><td><strong>143.41</strong></td>
+                  <td><strong>39.45</strong></td><td><strong>39.42</strong></td>
+                  <td><strong>139.26</strong></td><td><strong>138.73</strong></td>
+                  <td><strong>7.53</strong></td><td><span class="second">7.53</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">
+            MPJPE, PA-MPJPE, and Root Trans. are reported in millimeters, while Body Geo. is
+            reported in degrees. Best-5 reports all metrics for the candidate selected by
+            sample-level MPJPE. Lower values are better. Bold and underline denote the best and
+            second-best results, respectively.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-tint" id="qualitative">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <h2>Qualitative Results</h2>
+          <span class="title-rule" aria-hidden="true"></span>
+          <p class="section-intro">
+            Compare predicted hand locations and full-body trajectories against ground truth and
+            FIction in challenging procedural scenes.
+          </p>
+        </div>
+
+        <div class="qualitative-stack">
+          <article class="demo-shell reveal">
+            <div class="demo-domain-title">
+              <span>01</span>
+              <div>
+                <h3>Cooking</h3>
+                <p>Long-horizon object manipulation in a reconstructed kitchen.</p>
+              </div>
+            </div>
+            <figure class="demo-figure">
+              <img src="assets/cooking_qualitative.jpg"
+                   alt="Cooking qualitative comparison of past observations, ground truth, HIGFlow, and FIction."
+                   width="1744" height="1030" data-lightbox loading="lazy">
+            </figure>
+          </article>
+
+          <article class="demo-shell reveal">
+            <div class="demo-domain-title">
+              <span>02</span>
+              <div>
+                <h3>Bike Repair</h3>
+                <p>Large body displacement and tool-centered manipulation.</p>
+              </div>
+            </div>
+            <figure class="demo-figure">
+              <img src="assets/bike_qualitative.jpg"
+                   alt="Bike Repair qualitative comparison of past observations, ground truth, HIGFlow, and FIction."
+                   width="1728" height="1028" data-lightbox loading="lazy">
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section conclusion" id="conclusion">
+      <div class="container narrow reveal">
+        <div class="section-heading centered">
+          <h2>Conclusion</h2>
+          <span class="title-rule" aria-hidden="true"></span>
+        </div>
+        <div class="abstract-copy conclusion-copy">
+          <p>
+            We introduced the Coherent4D dataset, which provides temporally aligned interaction
+            location and full-body pose sequences in a shared coordinate system for continuous
+            supervision and evaluation. Building on this formulation, we proposed the HIGFlow
+            framework, a cascaded <em>where-to-how</em> model that couples future
+            interaction-location and full-body pose forecasting by using future interaction
+            locations as geometric conditions for pose prediction. Within HIGFlow,
+            Semantic-Dynamic Interaction Forecasting improves continuous interaction localization,
+            while Hand-Conditioned Residual Flow Matching produces diverse yet structurally
+            consistent poses. Experiments validate HIGFlow on both forecasting tasks, while
+            ablations confirm the contributions of its key components. Future work will explore
+            human-intent modeling and contact-aware conditioning for longer-horizon and more
+            physically consistent forecasts.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p><strong>From Where to How</strong> · Project page</p>
+      <p>Paper and code links will be added when publicly available. <span id="current-year"></span></p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Expanded figure">
+    <button class="lightbox-close" type="button" aria-label="Close expanded figure">×</button>
+    <img id="lightbox-image" src="assets/framework.png" alt="">
+    <p id="lightbox-caption"></p>
+  </dialog>
+</body>
+</html>
