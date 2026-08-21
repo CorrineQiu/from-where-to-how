@@ -1264,34 +1264,8 @@ tr.cooking-head > th {
   margin: 0;
 }
 
-.acknowledgment-card a {
-  color: var(--purple-dark);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.acknowledgment-card a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 .citation-card {
   margin-top: 28px;
-}
-
-.citation-heading {
-  padding: 17px 22px;
-  border-bottom: 1px solid var(--line);
-  background: linear-gradient(105deg, rgba(117, 103, 217, 0.1), rgba(20, 167, 156, 0.07));
-}
-
-.citation-heading h3 {
-  margin: 0;
-  color: var(--ink);
-  font-size: 1.08rem;
-  font-weight: 760;
-  letter-spacing: -0.02em;
-  line-height: 1.35;
 }
 
 .citation-card pre {
@@ -1638,10 +1612,6 @@ footer {
 
   .acknowledgment-card {
     padding: 19px 20px;
-  }
-
-  .citation-heading {
-    padding: 14px 16px;
   }
 
   .citation-card pre {
