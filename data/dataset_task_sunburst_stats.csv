@@ -1,0 +1,22 @@
+domain,task_name,chunk_sequences,percent_of_sequences,valid_future_targets,unique_takes
+Bike Repair,Fix a Flat Tire - Replace a Bike Tube,25278,10.8105,90717,74
+Bike Repair,Install a Wheel,5925,2.5339,20204,70
+Bike Repair,Clean and Lubricate the Chain,5149,2.202,17849,53
+Bike Repair,Remove a Wheel,2798,1.1966,9323,47
+Bike Repair,Adjust a Rear Derailueur,1039,0.4443,3540,7
+Cooking,Cooking Tomato & Eggs,34921,14.9345,285343,40
+Cooking,Cooking an Omelet,34825,14.8934,286475,69
+Cooking,Cooking Noodles,24574,10.5094,193939,29
+Cooking,Making Sesame-Ginger Asian Salad,15939,6.8165,128550,19
+Cooking,Making Milk Tea,15369,6.5728,121767,62
+Cooking,Making Cucumber & Tomato Salad,14951,6.394,119798,60
+Cooking,Cooking Scrambled Eggs,7365,3.1498,58813,18
+Cooking,Making Chai Tea,5200,2.2239,40967,11
+Cooking,Making Greek Salad,4578,1.9578,37306,6
+Cooking,Making Coffee latte,3682,1.5747,28066,9
+Cooking,Cooking Sushi Rolls,1347,0.5761,10449,3
+Cooking,Cooking Pasta,1136,0.4858,8339,3
+Cooking,Making White Radish & Lettuce & Tomato & Cucumber Salad,1129,0.4828,9243,1
+Cooking,Cooking Brownies,1025,0.4384,8534,1
+Health,Covid-19 Rapid Antigen Test,27424,11.7283,114559,174
+Health,First Aid - CPR,174,0.0744,405,31

@@ -1,0 +1,620 @@
+domain,verb,future_targets,percent_of_future_targets
+Cooking,pick,208258,13.0636
+Cooking,place,179820,11.2797
+Cooking,drop,72287,4.5344
+Cooking,hold,70074,4.3956
+Cooking,pour,57252,3.5913
+Cooking,move,52084,3.2671
+Cooking,pass,46803,2.9359
+Cooking,turn,46692,2.9289
+Cooking,add,45165,2.8331
+Cooking,stir,45108,2.8295
+Cooking,open,42293,2.653
+Cooking,cut,35615,2.2341
+Cooking,take,25499,1.5995
+Cooking,adjust,24348,1.5273
+Cooking,close,24275,1.5227
+Cooking,transfer,20857,1.3083
+Cooking,slice,17985,1.1282
+Cooking,put,17766,1.1144
+Cooking,scoop,15901,0.9974
+Cooking,pack,15317,0.9608
+Cooking,remove,14896,0.9344
+Cooking,touch,13641,0.8557
+Cooking,press,13103,0.8219
+Cooking,wipe,13080,0.8205
+Cooking,lift,11549,0.7244
+Cooking,covers,11314,0.7097
+Cooking,rinses,9490,0.5953
+Cooking,peels,8968,0.5625
+Cooking,shakes,8832,0.554
+Cooking,dices,7558,0.4741
+Cooking,whisks,7259,0.4553
+Cooking,scrapes,7072,0.4436
+Cooking,washes,6794,0.4262
+Cooking,read,6175,0.3873
+Cooking,clean,5879,0.3688
+Cooking,hits,5132,0.3219
+Cooking,cracks,4774,0.2995
+Cooking,dips,4695,0.2945
+Cooking,chops,4312,0.2705
+Cooking,regulates,4210,0.2641
+Cooking,flips,3990,0.2503
+Cooking,spreads,3871,0.2428
+Cooking,grab,3599,0.2258
+Cooking,gathers,3532,0.2216
+Cooking,pull,3498,0.2194
+Cooking,tilts,3271,0.2052
+Cooking,slides,3234,0.2029
+Cooking,throws,3214,0.2016
+Cooking,checks,3030,0.1901
+Cooking,folds,3003,0.1884
+Cooking,mixes,2571,0.1613
+Cooking,push,2260,0.1418
+Cooking,returns,2229,0.1398
+Cooking,taps,2166,0.1359
+Cooking,tosses,2075,0.1302
+Cooking,the,2067,0.1297
+Cooking,breaks,1931,0.1211
+Cooking,sprinkles,1912,0.1199
+Cooking,serves,1853,0.1162
+Cooking,gets,1790,0.1123
+Cooking,shifts,1707,0.1071
+Cooking,grates,1671,0.1048
+Cooking,drains,1520,0.0953
+Cooking,swirls,1500,0.0941
+Cooking,disposes,1497,0.0939
+Cooking,squeezes,1359,0.0852
+Cooking,raises,1338,0.0839
+Cooking,arranges,1337,0.0839
+Cooking,tears,1253,0.0786
+Cooking,rubs,1238,0.0777
+Cooking,lights,1119,0.0702
+Cooking,scrubs,1084,0.068
+Cooking,studies,1029,0.0645
+Cooking,rotates,1011,0.0634
+Cooking,use,986,0.0618
+Cooking,beats,976,0.0612
+Cooking,operates,879,0.0551
+Cooking,fetches,818,0.0513
+Cooking,gently,754,0.0473
+Cooking,switches,697,0.0437
+Cooking,crushes,684,0.0429
+Cooking,observes,680,0.0427
+Cooking,fills,661,0.0415
+Cooking,slips,602,0.0378
+Cooking,feels,557,0.0349
+Cooking,walks,549,0.0344
+Cooking,insert,536,0.0336
+Cooking,whisk,504,0.0316
+Cooking,flicks,504,0.0316
+Cooking,releases,490,0.0307
+Cooking,mashes,466,0.0292
+Cooking,detaches,455,0.0285
+Cooking,tilt,453,0.0284
+Cooking,rolls,432,0.0271
+Cooking,wraps,424,0.0266
+Cooking,melts,390,0.0245
+Cooking,sprays,386,0.0242
+Cooking,bangs,385,0.0242
+Cooking,bends,381,0.0239
+Cooking,ignites,377,0.0236
+Cooking,unfolds,375,0.0235
+Cooking,flattens,369,0.0231
+Cooking,eats,369,0.0231
+Cooking,dusts,368,0.0231
+Cooking,fixes,365,0.0229
+Cooking,positions,359,0.0225
+Cooking,brings,339,0.0213
+Cooking,spins,338,0.0212
+Cooking,swipes,334,0.021
+Cooking,draws,332,0.0208
+Cooking,unwraps,316,0.0198
+Cooking,separates,302,0.0189
+Cooking,plucks,301,0.0189
+Cooking,dries,291,0.0183
+Cooking,displaces,284,0.0178
+Cooking,a,265,0.0166
+Cooking,squashes,261,0.0164
+Cooking,drys,256,0.0161
+Cooking,shreds,249,0.0156
+Cooking,scraps,244,0.0153
+Cooking,smashes,237,0.0149
+Cooking,trashes,207,0.013
+Cooking,waits,203,0.0127
+Cooking,drinks,196,0.0123
+Cooking,straightens,193,0.0121
+Cooking,steeps,190,0.0119
+Cooking,strains,181,0.0114
+Cooking,carries,181,0.0114
+Cooking,licks,174,0.0109
+Cooking,attempts,174,0.0109
+Cooking,dishes,173,0.0109
+Cooking,pats,166,0.0104
+Cooking,tastes,163,0.0102
+Cooking,lays,153,0.0096
+Cooking,unscrews,153,0.0096
+Cooking,fits,149,0.0093
+Cooking,selects,147,0.0092
+Cooking,sets,147,0.0092
+Cooking,claps,142,0.0089
+Cooking,rests,141,0.0088
+Cooking,applies,139,0.0087
+Cooking,kneads,137,0.0086
+Cooking,clears,136,0.0085
+Cooking,stops,130,0.0082
+Cooking,strikes,127,0.008
+Cooking,extends,122,0.0077
+Cooking,sways,114,0.0072
+Cooking,wears,110,0.0069
+Cooking,spread,108,0.0068
+Cooking,dresses,107,0.0067
+Cooking,serve,106,0.0066
+Cooking,scopes,102,0.0064
+Cooking,reduces,99,0.0062
+Cooking,sits,99,0.0062
+Cooking,stacks,98,0.0061
+Cooking,srapes,97,0.0061
+Cooking,sieves,97,0.0061
+Cooking,waves,96,0.006
+Cooking,empties,95,0.006
+Cooking,crakes,88,0.0055
+Cooking,hovers,85,0.0053
+Cooking,unrolls,85,0.0053
+Cooking,tucks,85,0.0053
+Cooking,starts,84,0.0053
+Cooking,pickes,83,0.0052
+Cooking,splits,80,0.005
+Cooking,scrambles,78,0.0049
+Cooking,dunks,78,0.0049
+Cooking,repositions,78,0.0049
+Cooking,clips,77,0.0048
+Cooking,looks,77,0.0048
+Cooking,waggles,77,0.0048
+Cooking,pens,71,0.0045
+Cooking,dish,70,0.0044
+Cooking,hops,68,0.0043
+Cooking,collects,66,0.0041
+Cooking,blows,66,0.0041
+Cooking,hods,65,0.0041
+Cooking,dust,63,0.004
+Cooking,hangs,62,0.0039
+Cooking,visually,61,0.0038
+Cooking,attaches,61,0.0038
+Cooking,tips,60,0.0038
+Cooking,feel,59,0.0037
+Cooking,paces,58,0.0036
+Cooking,slide,57,0.0036
+Cooking,marks,57,0.0036
+Cooking,swings,57,0.0036
+Cooking,regulate,56,0.0035
+Cooking,mops,55,0.0035
+Cooking,pokes,54,0.0034
+Cooking,queezes,51,0.0032
+Cooking,downs,49,0.0031
+Cooking,meshes,49,0.0031
+Cooking,attach,49,0.0031
+Cooking,sweeps,47,0.0029
+Cooking,changes,47,0.0029
+Cooking,man,47,0.0029
+Cooking,squeeze,46,0.0029
+Cooking,stakes,46,0.0029
+Cooking,discards,46,0.0029
+Cooking,leans,46,0.0029
+Cooking,lowers,46,0.0029
+Cooking,scrape,44,0.0028
+Cooking,pus,44,0.0028
+Cooking,pinch,44,0.0028
+Cooking,shuts,44,0.0028
+Cooking,reaches,43,0.0027
+Cooking,smells,43,0.0027
+Cooking,pocks,42,0.0026
+Cooking,unwinds,41,0.0026
+Cooking,removed,41,0.0026
+Cooking,loosens,40,0.0025
+Cooking,graps,40,0.0025
+Cooking,passe,40,0.0025
+Cooking,tuns,39,0.0024
+Cooking,seals,39,0.0024
+Cooking,cv,39,0.0024
+Cooking,ties,39,0.0024
+Cooking,hollds,39,0.0024
+Cooking,scatters,38,0.0024
+Cooking,keeps,37,0.0023
+Cooking,an,36,0.0023
+Cooking,touched,36,0.0023
+Cooking,scratches,35,0.0022
+Cooking,wets,35,0.0022
+Cooking,allows,35,0.0022
+Cooking,parks,35,0.0022
+Cooking,pounds,35,0.0022
+Cooking,sprinkle,33,0.0021
+Cooking,c,32,0.002
+Cooking,trims,32,0.002
+Cooking,bents,32,0.002
+Cooking,rinse,31,0.0019
+Cooking,stretches,29,0.0018
+Cooking,tighten,29,0.0018
+Cooking,wedges,28,0.0018
+Cooking,laces,27,0.0017
+Cooking,pores,27,0.0017
+Cooking,stands,27,0.0017
+Cooking,cpovers,26,0.0016
+Cooking,makes,26,0.0016
+Cooking,clicks,26,0.0016
+Cooking,twists,26,0.0016
+Cooking,orange,26,0.0016
+Cooking,grinds,26,0.0016
+Cooking,rearranges,25,0.0016
+Cooking,grazes,24,0.0015
+Cooking,nreaks,23,0.0014
+Cooking,runs,22,0.0014
+Cooking,punctures,22,0.0014
+Cooking,grips,21,0.0013
+Cooking,rekindles,20,0.0013
+Cooking,water,20,0.0013
+Cooking,pushed,19,0.0012
+Cooking,cleanses,18,0.0011
+Cooking,pases,18,0.0011
+Cooking,clamps,17,0.0011
+Cooking,slashes,16,0.001
+Cooking,d,16,0.001
+Cooking,brushes,15,0.0009
+Cooking,wash,14,0.0009
+Cooking,swirl,14,0.0009
+Cooking,trash,13,0.0008
+Cooking,minces,13,0.0008
+Cooking,subs,12,0.0008
+Cooking,moved,11,0.0007
+Cooking,tries,10,0.0006
+Cooking,fetched,10,0.0006
+Cooking,slants,8,0.0005
+Cooking,raise,8,0.0005
+Cooking,clices,7,0.0004
+Cooking,drags,6,0.0004
+Cooking,pierces,6,0.0004
+Cooking,divides,5,0.0003
+Cooking,supports,3,0.0002
+Cooking,adjusteds,2,0.0001
+Cooking,pics,2,0.0001
+Cooking,compresses,2,0.0001
+Cooking,circulates,2,0.0001
+Cooking,pumps,1,0.0001
+Cooking,pills,1,0.0001
+Cooking,strain,1,0.0001
+Cooking,wrap,1,0.0001
+Cooking,catches,1,0.0001
+Cooking,chop,1,0.0001
+Cooking,seperates,1,0.0001
+Cooking,uncovers,1,0.0001
+Cooking,unties,1,0.0001
+Cooking,dispose,1,0.0001
+Cooking,dops,1,0.0001
+Cooking,plavces,1,0.0001
+Cooking,measure,1,0.0001
+Cooking,pinches,1,0.0001
+Cooking,overs,1,0.0001
+Cooking,pouts,1,0.0001
+Cooking,locks,1,0.0001
+Cooking,readjusts,1,0.0001
+Cooking,tugs,1,0.0001
+Cooking,stir-fries,1,0.0001
+Cooking,measures,1,0.0001
+Cooking,dumps,1,0.0001
+Cooking,unseal,1,0.0001
+Cooking,rapidly,1,0.0001
+Cooking,looses,1,0.0001
+Cooking,bores,1,0.0001
+Bike Repair,hold,23698,1.4865
+Bike Repair,place,15410,0.9666
+Bike Repair,pick,10741,0.6738
+Bike Repair,move,8016,0.5028
+Bike Repair,turn,6257,0.3925
+Bike Repair,adjust,5966,0.3742
+Bike Repair,pass,4062,0.2548
+Bike Repair,insert,3898,0.2445
+Bike Repair,remove,3715,0.233
+Bike Repair,tighten,3509,0.2201
+Bike Repair,inflate,3455,0.2167
+Bike Repair,lift,3392,0.2128
+Bike Repair,fits,3222,0.2021
+Bike Repair,pull,2553,0.1601
+Bike Repair,drop,2244,0.1408
+Bike Repair,clean,2229,0.1398
+Bike Repair,press,2124,0.1332
+Bike Repair,pumps,1977,0.124
+Bike Repair,fixes,1833,0.115
+Bike Repair,rolls,1790,0.1123
+Bike Repair,touch,1704,0.1069
+Bike Repair,put,1661,0.1042
+Bike Repair,loosens,1602,0.1005
+Bike Repair,transfer,1195,0.075
+Bike Repair,rotates,1094,0.0686
+Bike Repair,flips,1055,0.0662
+Bike Repair,inspects,985,0.0618
+Bike Repair,take,922,0.0578
+Bike Repair,sets,911,0.0571
+Bike Repair,push,889,0.0558
+Bike Repair,squeezes,774,0.0486
+Bike Repair,dips,769,0.0482
+Bike Repair,examines,731,0.0459
+Bike Repair,disconnects,650,0.0408
+Bike Repair,backpaddles,641,0.0402
+Bike Repair,hangs,585,0.0367
+Bike Repair,engages,565,0.0354
+Bike Repair,tucks,541,0.0339
+Bike Repair,shakes,520,0.0326
+Bike Repair,brushes,471,0.0295
+Bike Repair,applies,465,0.0292
+Bike Repair,folds,416,0.0261
+Bike Repair,screws,414,0.026
+Bike Repair,attaches,408,0.0256
+Bike Repair,grab,406,0.0255
+Bike Repair,positions,401,0.0252
+Bike Repair,open,392,0.0246
+Bike Repair,wipe,383,0.024
+Bike Repair,the,379,0.0238
+Bike Repair,spins,347,0.0218
+Bike Repair,spreads,347,0.0218
+Bike Repair,extracts,339,0.0213
+Bike Repair,hits,330,0.0207
+Bike Repair,connects,306,0.0192
+Bike Repair,swirls,297,0.0186
+Bike Repair,unscrews,281,0.0176
+Bike Repair,raises,279,0.0175
+Bike Repair,looses,269,0.0169
+Bike Repair,aligns,257,0.0161
+Bike Repair,stir,257,0.0161
+Bike Repair,use,256,0.0161
+Bike Repair,observes,250,0.0157
+Bike Repair,rests,238,0.0149
+Bike Repair,detaches,226,0.0142
+Bike Repair,covers,221,0.0139
+Bike Repair,pour,213,0.0134
+Bike Repair,bounces,202,0.0127
+Bike Repair,checks,194,0.0122
+Bike Repair,unlocks,188,0.0118
+Bike Repair,throws,183,0.0115
+Bike Repair,stands,161,0.0101
+Bike Repair,slides,159,0.01
+Bike Repair,unwraps,152,0.0095
+Bike Repair,withdraws,146,0.0092
+Bike Repair,locks,142,0.0089
+Bike Repair,unpacks,135,0.0085
+Bike Repair,releases,131,0.0082
+Bike Repair,close,130,0.0082
+Bike Repair,tears,118,0.0074
+Bike Repair,deflates,115,0.0072
+Bike Repair,hand,105,0.0066
+Bike Repair,unfolds,105,0.0066
+Bike Repair,runs,98,0.0061
+Bike Repair,gently,87,0.0055
+Bike Repair,lays,81,0.0051
+Bike Repair,fastens,77,0.0048
+Bike Repair,steps,77,0.0048
+Bike Repair,rubs,76,0.0048
+Bike Repair,stops,74,0.0046
+Bike Repair,scrubs,72,0.0045
+Bike Repair,leans,71,0.0045
+Bike Repair,inspect,69,0.0043
+Bike Repair,untightens,67,0.0042
+Bike Repair,partially,65,0.0041
+Bike Repair,installs,61,0.0038
+Bike Repair,seats,59,0.0037
+Bike Repair,bends,58,0.0036
+Bike Repair,add,52,0.0033
+Bike Repair,lowers,49,0.0031
+Bike Repair,extends,49,0.0031
+Bike Repair,straightens,49,0.0031
+Bike Repair,crosses,48,0.003
+Bike Repair,pivots,47,0.0029
+Bike Repair,receives,46,0.0029
+Bike Repair,cut,44,0.0028
+Bike Repair,expands,39,0.0024
+Bike Repair,fully,38,0.0024
+Bike Repair,fix,35,0.0022
+Bike Repair,unrolls,34,0.0021
+Bike Repair,separates,34,0.0021
+Bike Repair,release,33,0.0021
+Bike Repair,brings,32,0.002
+Bike Repair,gathers,32,0.002
+Bike Repair,returns,31,0.0019
+Bike Repair,tapes,30,0.0019
+Bike Repair,ties,30,0.0019
+Bike Repair,a,29,0.0018
+Bike Repair,untangles,29,0.0018
+Bike Repair,shifts,28,0.0018
+Bike Repair,pierces,27,0.0017
+Bike Repair,tugs,26,0.0016
+Bike Repair,bursts,25,0.0016
+Bike Repair,collects,24,0.0015
+Bike Repair,screw,24,0.0015
+Bike Repair,unties,24,0.0015
+Bike Repair,deflate,22,0.0014
+Bike Repair,stretches,22,0.0014
+Bike Repair,wears,22,0.0014
+Bike Repair,starts,19,0.0012
+Bike Repair,climbs,19,0.0012
+Bike Repair,makes,17,0.0011
+Bike Repair,clips,17,0.0011
+Bike Repair,unhooks,17,0.0011
+Bike Repair,forcefully,16,0.001
+Bike Repair,mixes,16,0.001
+Bike Repair,rips,16,0.001
+Bike Repair,uncrew,14,0.0009
+Bike Repair,peels,14,0.0009
+Bike Repair,tilts,13,0.0008
+Bike Repair,gets,13,0.0008
+Bike Repair,hooks,12,0.0008
+Bike Repair,attempts,12,0.0008
+Bike Repair,man,12,0.0008
+Bike Repair,sits,11,0.0007
+Bike Repair,arranges,10,0.0006
+Bike Repair,displace,10,0.0006
+Bike Repair,tries,10,0.0006
+Bike Repair,points,10,0.0006
+Bike Repair,sprays,9,0.0006
+Bike Repair,kicks,9,0.0006
+Bike Repair,unsheathes,8,0.0005
+Bike Repair,displaces,8,0.0005
+Bike Repair,readjusts,8,0.0005
+Bike Repair,feels,8,0.0005
+Bike Repair,tests,7,0.0004
+Bike Repair,set,6,0.0004
+Bike Repair,dries,5,0.0003
+Bike Repair,pocks,5,0.0003
+Bike Repair,separate,5,0.0003
+Bike Repair,properly,4,0.0003
+Bike Repair,tosses,4,0.0003
+Bike Repair,scrapes,3,0.0002
+Bike Repair,jerks,3,0.0002
+Bike Repair,levers,2,0.0001
+Bike Repair,sticks,2,0.0001
+Bike Repair,swings,2,0.0001
+Bike Repair,supports,2,0.0001
+Bike Repair,alters,1,0.0001
+Bike Repair,draws,1,0.0001
+Bike Repair,rises,1,0.0001
+Bike Repair,sways,1,0.0001
+Bike Repair,catches,1,0.0001
+Bike Repair,hods,1,0.0001
+Bike Repair,pressed,1,0.0001
+Bike Repair,observe,1,0.0001
+Bike Repair,suspends,1,0.0001
+Bike Repair,reconnects,1,0.0001
+Health,place,20505,1.2862
+Health,pick,19541,1.2258
+Health,hold,10316,0.6471
+Health,read,7155,0.4488
+Health,move,5507,0.3454
+Health,open,5210,0.3268
+Health,drop,5067,0.3178
+Health,pass,4644,0.2913
+Health,remove,2941,0.1845
+Health,put,2896,0.1817
+Health,take,2746,0.1723
+Health,close,2266,0.1421
+Health,adjust,1931,0.1211
+Health,dips,1651,0.1036
+Health,insert,1600,0.1004
+Health,touch,1480,0.0928
+Health,tears,1214,0.0762
+Health,turn,1208,0.0758
+Health,transfer,1055,0.0662
+Health,cut,983,0.0617
+Health,press,934,0.0586
+Health,checks,918,0.0576
+Health,folds,812,0.0509
+Health,shifts,800,0.0502
+Health,pour,774,0.0486
+Health,pull,764,0.0479
+Health,covers,685,0.043
+Health,lift,685,0.043
+Health,rotates,656,0.0411
+Health,seals,588,0.0369
+Health,shakes,569,0.0357
+Health,applies,482,0.0302
+Health,studies,359,0.0225
+Health,positions,352,0.0221
+Health,flips,339,0.0213
+Health,add,309,0.0194
+Health,unfolds,293,0.0184
+Health,extracts,291,0.0183
+Health,brings,220,0.0138
+Health,throws,186,0.0117
+Health,swirls,170,0.0107
+Health,squeezes,165,0.0104
+Health,spreads,159,0.01
+Health,push,146,0.0092
+Health,starts,138,0.0087
+Health,disposes,133,0.0083
+Health,trashes,132,0.0083
+Health,unwraps,130,0.0082
+Health,bends,129,0.0081
+Health,sorts,124,0.0078
+Health,grab,110,0.0069
+Health,peels,96,0.006
+Health,observes,82,0.0051
+Health,tighten,80,0.005
+Health,rests,71,0.0045
+Health,breaks,68,0.0043
+Health,gathers,64,0.004
+Health,operates,64,0.004
+Health,traces,62,0.0039
+Health,swirl,61,0.0038
+Health,taps,59,0.0037
+Health,returns,59,0.0037
+Health,hits,58,0.0036
+Health,tosses,58,0.0036
+Health,unseals,55,0.0035
+Health,makes,54,0.0034
+Health,unwarps,52,0.0033
+Health,displaces,51,0.0032
+Health,gets,50,0.0031
+Health,lowers,49,0.0031
+Health,clicks,49,0.0031
+Health,runs,48,0.003
+Health,stops,46,0.0029
+Health,compresses,45,0.0028
+Health,stacks,45,0.0028
+Health,man,44,0.0028
+Health,twirls,44,0.0028
+Health,locks,43,0.0027
+Health,fixes,42,0.0026
+Health,attempts,41,0.0026
+Health,rocks,40,0.0025
+Health,twist,37,0.0023
+Health,punctures,36,0.0023
+Health,squeeze,35,0.0022
+Health,swabs,35,0.0022
+Health,straightens,33,0.0021
+Health,visually,32,0.002
+Health,inverts,31,0.0019
+Health,raises,30,0.0019
+Health,flattens,30,0.0019
+Health,fits,29,0.0018
+Health,pins,28,0.0018
+Health,directs,28,0.0018
+Health,arranges,26,0.0016
+Health,point,24,0.0015
+Health,a,23,0.0014
+Health,repositions,23,0.0014
+Health,points,22,0.0014
+Health,sets,22,0.0014
+Health,unscrews,22,0.0014
+Health,the,21,0.0013
+Health,puncture,21,0.0013
+Health,screws,20,0.0013
+Health,interlaces,19,0.0012
+Health,organizes,17,0.0011
+Health,drags,17,0.0011
+Health,boxes,16,0.001
+Health,unlocks,15,0.0009
+Health,slides,11,0.0007
+Health,supports,11,0.0007
+Health,rotate,11,0.0007
+Health,fold,10,0.0006
+Health,outs,8,0.0005
+Health,unpacks,8,0.0005
+Health,twists,7,0.0004
+Health,splits,7,0.0004
+Health,resets,6,0.0004
+Health,unwrap,6,0.0004
+Health,unboxes,4,0.0003
+Health,examines,4,0.0003
+Health,wraps,4,0.0003
+Health,interlocks,4,0.0003
+Health,performs,3,0.0002
+Health,apply,3,0.0002
+Health,punches,2,0.0001
+Health,pinches,2,0.0001
+Health,draws,2,0.0001
+Health,stir,2,0.0001
+Health,rolls,2,0.0001
+Health,pumps,1,0.0001
+Health,hods,1,0.0001
+Health,inspects,1,0.0001
+Health,changes,1,0.0001
+Health,rubs,1,0.0001
+Health,creates,1,0.0001
+Health,strikes,1,0.0001

@@ -1,0 +1,5 @@
+domain,future_steps,unique_takes,train_samples,val_samples,test_samples,total_samples,valid_future_targets,interaction_object_labels
+Cooking,10,331,136079,15435,14527,166041,1337589,428
+Health,5,205,21532,1899,4167,27598,114964,170
+Bike Repair,4,251,35987,3150,1052,40189,141633,197
+Total,,787,193598,20484,19746,233828,1594186,535
