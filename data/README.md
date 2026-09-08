@@ -12,9 +12,9 @@ This directory contains **aggregate metadata and annotation documentation**, not
 | [dataset_task_sunburst_stats.csv](dataset_task_sunburst_stats.csv) | Counts for all 21 procedural tasks | Existing source CSV for the dataset distribution figure |
 | [dataset_narration_verb_stats.csv](dataset_narration_verb_stats.csv) | 619 domain–verb rows describing future-target verb frequencies | Existing source CSV for the narration verb distribution figure |
 | [ANNOTATION_GUIDE.md](ANNOTATION_GUIDE.md) | Meaning of the main annotation fields, coordinate conventions, timestamps, and masks | Manuscript and inspected local preprocessing interfaces |
-| [RELEASE_REVIEW.md](RELEASE_REVIEW.md) | Checks performed and decisions about candidate annotation files | Documentation release review dated 2026-09-08 |
+| [RELEASE_REVIEW.md](RELEASE_REVIEW.md) | Metadata validation, file checksums, and planned annotation exports | Annotation release notes dated 2026-09-08 |
 
-The two figure-source CSVs are copied without changing their contents. They contain aggregate category counts, not complete narrations, take identifiers, machine-specific paths, or per-person motion records. Original category spellings are retained for consistency with the figures.
+The two figure-source CSVs contain aggregate category counts and are copied without changing their contents. Original category spellings are retained for consistency with the figures.
 
 ## Reading the metadata
 
@@ -40,14 +40,14 @@ The two figure-source CSVs are copied without changing their contents. They cont
 
 Percentages are rounded. The 619 rows count domain–verb combinations and should not be interpreted as 619 distinct verbs across the whole dataset.
 
-## Access to source data
+## Source data and models
 
-Coherent4D is constructed from [Ego-Exo4D](https://ego-exo4d-data.org/). Obtain source videos, calibration, trajectories, point clouds, and annotations through the [official access procedure](https://docs.ego-exo4d-data.org/getting-started/), subject to the applicable agreement. This repository does not provide credentials or bypass that access process.
+Coherent4D is constructed from [Ego-Exo4D](https://ego-exo4d-data.org/). Source videos, calibration, trajectories, point clouds, and annotations are available through the [official getting-started guide](https://docs.ego-exo4d-data.org/getting-started/).
 
-WHAM and SMPL resources should likewise be obtained from their [upstream sources](../process/README.md#models-and-resources). We do not bundle their pretrained weights or SMPL model files.
+The [models and resources](../process/README.md#models-and-resources) section links WHAM, SMPL, and the other tools used in annotation construction.
 
 ## Planned annotation release
 
 Following the lightweight organization of [FIction's data directory](https://github.com/thechargedneutron/FIction/tree/main/data), the most useful additions would be final Coherent4D take-level split manifests and portable sample indices. They must be generated from the exact filtered dataset snapshot used for the reported experiments. FIction's original take lists and absolute feature paths are not substitutes for these files.
 
-Before any per-sample release, we need to verify provenance, split disjointness, coordinate units, timestamp alignment, masks, portable paths, and redistribution terms. The full annotation package should be separately versioned with checksums and a documented schema. No download link or release date is promised here before those checks are complete.
+Per-sample exports require checks of source provenance, take-level split disjointness, coordinate units, timestamp alignment, masks, and portable paths. The annotation package will need a versioned schema and file checksums.

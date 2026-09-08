@@ -2,7 +2,7 @@
 
 [Repository](../README.md) · [Annotation metadata](../data/README.md) · [Annotation field guide](../data/ANNOTATION_GUIDE.md)
 
-Coherent4D organizes continuous 3D interaction locations and full-body poses into time-aligned forecasting samples. The five stages below follow Section III-A of the supplied manuscript. They describe the annotation process; **this directory does not contain executable preprocessing code or source-video data**.
+Coherent4D organizes continuous 3D interaction locations and full-body poses into time-aligned forecasting samples. The five stages below describe the annotation process in Section III-A of the manuscript.
 
 ## Annotation pipeline
 
@@ -22,15 +22,13 @@ These are logical stages rather than an executable scheduling dependency: motion
 
 ## Source preparation
 
-Obtain the required [Ego-Exo4D resources](https://docs.ego-exo4d-data.org/getting-started/) through the official access procedure. The procedural domains used here are Cooking, Health, and Bike Repair. Relevant inputs include:
+Prepare the required [Ego-Exo4D resources](https://docs.ego-exo4d-data.org/getting-started/) for Cooking, Health, and Bike Repair. Relevant inputs include:
 
 - The Aria egocentric video and synchronized exocentric views.
 - Camera calibration, pose trajectories, and SLAM scene geometry.
 - Timestamped narrations and source take metadata.
 
 Keep video, narration, and pose timestamps on a consistent take timeline. The Aria stream provides the forecasting video input. Synchronized exocentric views support offline annotation construction and refinement; they are not future visual inputs to the forecasting model.
-
-Source access and redistribution remain subject to the upstream terms. This repository adds annotation-related metadata and construction documentation, not a mirror of the source dataset.
 
 ## 1. Scene Object Grounding
 
@@ -94,7 +92,7 @@ $$
 \lVert p_j-p_i\rVert_2\leq\delta_{\mathrm{position}}.
 $$
 
-Here the temporal threshold is in seconds and the spatial threshold is in meters. A threshold applied to normalized positions would need the corresponding scale conversion. Historical script defaults and example commands use different values, so this guide does not claim an unverified universal threshold for the final dataset. The final export configuration must specify these values, any debounce interval, and the representative-event rule.
+Here the temporal threshold is in seconds and the spatial threshold is in meters. A threshold applied to normalized positions would need the corresponding scale conversion. Historical script defaults and example commands use different thresholds. The final export configuration must specify these values, any debounce interval, and the representative-event rule.
 
 **Output:** ordered interaction events with continuous 3D locations and original timestamps. Event spacing can be nonuniform. Observed hand-location history can additionally contain compressed trajectory samples that are not individually labeled as object interactions.
 
@@ -112,7 +110,7 @@ Here the temporal threshold is in seconds and the spatial threshold is in meters
 
 **Output:** location and full-body pose sequences paired at the same target timestamps. The pose model uses 6D root rotation, 3D root translation, and 23 local 6D joint rotations, totaling 147 state dimensions. Evaluation can select a subset of joints without changing this state representation.
 
-WHAM and SMPL weights/model assets are not bundled here. Acquire them through the official resources and their applicable terms. The historical preprocessing variants inspected during documentation preparation do not, on their own, establish the complete provenance of every final pose record; that remains part of the [annotation release review](../data/RELEASE_REVIEW.md).
+Per-record WHAM-to-scene alignment validation is tracked in the [annotation release notes](../data/RELEASE_REVIEW.md).
 
 ## 5. Forecast Sample Generation
 
@@ -126,13 +124,13 @@ WHAM and SMPL weights/model assets are not bundled here. Acquire them through th
 4. Pad incomplete tail sequences to the domain horizon and mark padded targets invalid. Exclude padding and invalid attachments from losses, metrics, and target counts.
 5. Filter samples that fail the required grounding, coordinate, timestamp, or pose checks. Keep all samples from the same take in a single training, validation, or test split, then audit the final manifests against the reported counts.
 
-**Output:** an observation context and a fixed number of future location/pose slots, accompanied by timestamps and validity masks. The dataset contains 233,828 forecasting samples across 787 takes, as reported in [the aggregate metadata](../data/README.md); the complete per-sample records are not distributed in this repository update.
+**Output:** an observation context and a fixed number of future location/pose slots, accompanied by timestamps and validity masks. The dataset contains 233,828 forecasting samples across 787 takes, as reported in [the aggregate metadata](../data/README.md).
 
 ## Models and resources
 
 | Resource | Role | Official link |
 |---|---|---|
-| Ego-Exo4D | Source video, scene geometry, calibration, and temporal annotations | [Website](https://ego-exo4d-data.org/) · [Documentation and access](https://docs.ego-exo4d-data.org/getting-started/) |
+| Ego-Exo4D | Source video, scene geometry, calibration, and temporal annotations | [Website](https://ego-exo4d-data.org/) · [Documentation](https://docs.ego-exo4d-data.org/getting-started/) |
 | FIction | Prior interaction annotation and preparation pipeline | [Repository](https://github.com/thechargedneutron/FIction) · [Preparation guide](https://github.com/thechargedneutron/FIction/blob/main/preprocess/README.md) |
 | Detic | Object detection for scene grounding | [Repository](https://github.com/facebookresearch/Detic) |
 | LVIS | Semantic object vocabulary; a dataset/vocabulary, not a separate predictor | [Website](https://www.lvisdataset.org/) |
@@ -142,6 +140,6 @@ WHAM and SMPL weights/model assets are not bundled here. Acquire them through th
 
 ### Forecasting models are separate from annotation construction
 
-[Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) and [V-JEPA 2](https://github.com/facebookresearch/vjepa2) provide semantic and dynamic representations in the HIGFlow forecasting stage. They are not substitutes for the object grounding, narration matching, or body annotation steps above. This documentation update does not release their features, adapters, HIGFlow training code, or inference code.
+[Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) and [V-JEPA 2](https://github.com/facebookresearch/vjepa2) provide semantic and dynamic representations in the HIGFlow forecasting stage, separate from the object grounding, narration matching, and body annotation steps above.
 
-Upstream repositories can evolve. Their links identify the relevant projects, not a guarantee that their current default checkpoints and settings exactly reproduce the historical Coherent4D export. Exact versions and preprocessing parameters need to accompany the eventual annotation release.
+Exact model versions, checkpoints, and preprocessing parameters need to accompany the annotation export for reproducibility.

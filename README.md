@@ -10,7 +10,7 @@ Coherent4D pairs continuous 3D interaction locations with temporally aligned ful
 
 This repository currently provides the project website, qualitative media, data construction documentation, and aggregate dataset metadata. **Training/inference code, model weights, and per-sample training annotations are not included in this release.**
 
-The `data/` directory contains the task and verb statistics used for the paper figures, the reported split counts, and an annotation field guide. It is not a downloadable copy of the complete Coherent4D dataset. See the [annotation release review](data/RELEASE_REVIEW.md) for what has been checked and what remains pending.
+The `data/` directory contains the task and verb statistics used for the paper figures, the reported split counts, and an annotation field guide. See the [annotation release notes](data/RELEASE_REVIEW.md) for metadata validation and planned annotation exports.
 
 ## Coherent4D dataset
 
@@ -21,7 +21,7 @@ The `data/` directory contains the task and verb statistics used for the paper f
 | Bike Repair | 4 | 251 | 35,987 | 3,150 | 1,052 | 40,189 |
 | Total | — | 787 | 193,598 | 20,484 | 19,746 | 233,828 |
 
-The dataset covers 21 procedural tasks and 535 interaction-object labels, with 1,594,186 valid future targets. These counts describe the dataset reported in the manuscript, not files bundled in this repository.
+The dataset reported in the manuscript covers 21 procedural tasks and 535 interaction-object labels, with 1,594,186 valid future targets.
 
 ## Data construction
 
@@ -84,5 +84,3 @@ Paper and code links in the webpage are placeholders until public URLs are avail
 ## Acknowledgments
 
 We thank the [Ego-Exo4D](https://ego-exo4d-data.org/) team and participants for making this research possible, and acknowledge [FIction](https://github.com/thechargedneutron/FIction) and the upstream annotation tools described in the construction guide.
-
-Access to original Ego-Exo4D data and annotations is governed by its [official access and license process](https://docs.ego-exo4d-data.org/getting-started/). Links to third-party resources do not grant redistribution rights to their data or model files.
