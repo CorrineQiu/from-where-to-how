@@ -110,7 +110,7 @@ Here the temporal threshold is in seconds and the spatial threshold is in meters
 
 **Output:** location and full-body pose sequences paired at the same target timestamps. The pose model uses 6D root rotation, 3D root translation, and 23 local 6D joint rotations, totaling 147 state dimensions. Evaluation can select a subset of joints without changing this state representation.
 
-Per-record WHAM-to-scene alignment validation is tracked in the [annotation release notes](../data/RELEASE_REVIEW.md).
+Per-record WHAM-to-scene alignment validation is tracked in the [annotation validation notes](../data/RELEASE_REVIEW.md).
 
 ## 5. Forecast Sample Generation
 

@@ -6,12 +6,6 @@ Coherent4D pairs continuous 3D interaction locations with temporally aligned ful
 
 [Project page](https://corrineqiu.github.io/from-where-to-how/) · [Dataset metadata](data/README.md) · [Data construction](process/README.md) · [Annotation guide](data/ANNOTATION_GUIDE.md)
 
-## Release status
-
-This repository currently provides the project website, qualitative media, data construction documentation, and aggregate dataset metadata. **Training/inference code, model weights, and per-sample training annotations are not included in this release.**
-
-The `data/` directory contains the task and verb statistics used for the paper figures, the reported split counts, and an annotation field guide. See the [annotation release notes](data/RELEASE_REVIEW.md) for metadata validation and planned annotation exports.
-
 ## Coherent4D dataset
 
 | Domain | Future steps | Takes | Train | Validation | Test | Total samples |
@@ -22,6 +16,8 @@ The `data/` directory contains the task and verb statistics used for the paper f
 | Total | — | 787 | 193,598 | 20,484 | 19,746 | 233,828 |
 
 The dataset reported in the manuscript covers 21 procedural tasks and 535 interaction-object labels, with 1,594,186 valid future targets.
+
+The [`data/`](data/README.md) directory contains the task and verb statistics used for the paper figures, the reported split counts, and an annotation field guide. See the [metadata validation notes](data/RELEASE_REVIEW.md) for validation details and annotation export requirements.
 
 ## Data construction
 
@@ -35,33 +31,10 @@ Open [`process/`](process/README.md) for the annotation pipeline figure and a st
 
 The guide links the relevant upstream resources, including Ego-Exo4D, FIction, Detic, LVIS, Llama 3, WHAM, and SMPL. It distinguishes annotation construction from the Qwen3-VL and V-JEPA representations used for forecasting.
 
-## Local preview
-
-The page uses only local static assets. Either open `index.html` directly or run a local server:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
-
-## Publish with GitHub Pages
-
-The site is published directly from the root of the `main` branch. In
-**Settings → Pages**, use **Deploy from a branch**, select `main`, and select
-`/(root)` as the folder.
-
-The current project-page URL is:
-
-```text
-https://corrineqiu.github.io/from-where-to-how/
-```
-
-## Repository structure
+## Data and annotation files
 
 ```text
 .
-├── assets/
 ├── data/
 │   ├── README.md
 │   ├── ANNOTATION_GUIDE.md
@@ -69,17 +42,10 @@ https://corrineqiu.github.io/from-where-to-how/
 │   ├── dataset_statistics.csv
 │   ├── dataset_task_sunburst_stats.csv
 │   └── dataset_narration_verb_stats.csv
-├── process/
-│   ├── README.md
-│   └── annotation_pipeline.png
-├── index.html
-├── styles.css
-├── script.js
-├── iiith_cooking_58_2_idx6839_original_switchcam.mp4
-└── iiith_cooking_58_2_idx6839_rendered_continuous_pose.mp4
+└── process/
+    ├── README.md
+    └── annotation_pipeline.png
 ```
-
-The Code button links to this repository. The Paper button remains a placeholder.
 
 ## Acknowledgments
 

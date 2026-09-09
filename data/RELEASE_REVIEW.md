@@ -1,23 +1,22 @@
-# Annotation release notes
+# Annotation validation notes
 
 Updated: 2026-09-08.
 
-This document summarizes the included metadata, its validation, and the remaining work for per-sample annotation exports.
+This document summarizes the included metadata, its validation, and requirements for per-sample annotation exports.
 
 ## Annotation file status
 
-| Candidate material | Decision for this update | Reason |
+| Material | Availability | Validation notes |
 |---|---|---|
-| Dataset statistics from Table I | Include | Already reported in the manuscript and project page; aggregate counts only |
-| Task distribution source CSV | Include | 21 task rows; totals match the reported samples, targets, and takes |
-| Narration verb distribution source CSV | Include | 619 domain–verb rows; totals match the reported targets |
-| Final Coherent4D take split manifests | Hold | Must be extracted and validated against the exact final filtered dataset |
-| Legacy FIction take lists | Do not copy as Coherent4D splits | The inspected lists contain 851 takes, whereas the reported Coherent4D snapshot has 787 |
-| Legacy `rgb_feature_paths*.json` | Do not copy | Environment-specific feature paths are not portable dataset annotations |
-| Nine pose-augmented train/validation/test PKLs | Hold | About 13.8 GB in total; require per-sample provenance, alignment, split, and schema validation |
+| Dataset statistics from Table I | Included | Already reported in the manuscript and project page; aggregate counts only |
+| Task distribution source CSV | Included | 21 task rows; totals match the reported samples, targets, and takes |
+| Narration verb distribution source CSV | Included | 619 domain–verb rows; totals match the reported targets |
+| Final Coherent4D take split manifests | Not included | Must be extracted and validated against the exact final filtered dataset |
+| Legacy FIction take lists | Not included | The inspected lists contain 851 takes, whereas the reported Coherent4D snapshot has 787; they cannot serve as Coherent4D splits |
+| Legacy `rgb_feature_paths*.json` | Not included | Environment-specific feature paths are not portable dataset annotations |
+| Nine pose-augmented train/validation/test PKLs | Not included | About 13.8 GB in total; require per-sample provenance, alignment, split, and schema validation |
 | Raw narrations, source media, and scene/pose intermediates | Not included | Inputs and intermediate outputs of the annotation pipeline, rather than portable final sample annotations |
 | SMPL model files, pretrained model weights, and extracted feature tensors | Not included | Model assets and features, rather than dataset annotations |
-| Training, inference, and preprocessing code | Exclude | Code release is not part of this update |
 
 ## Checks on the included metadata
 
@@ -39,7 +38,7 @@ The figure-source files are preserved byte-for-byte. SHA-256 checksums:
 
 `dataset_statistics.csv` is transcribed from Table I of the manuscript.
 
-## Before releasing per-sample annotations
+## Per-sample annotation validation
 
 - [ ] Identify the exact dataset snapshot and export configurations used for the reported experiments.
 - [ ] Generate portable split and sample manifests from that snapshot; verify take-level disjointness and counts.
