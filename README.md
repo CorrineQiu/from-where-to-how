@@ -79,7 +79,7 @@ https://corrineqiu.github.io/from-where-to-how/
 └── iiith_cooking_58_2_idx6839_rendered_continuous_pose.mp4
 ```
 
-Paper and code links in the webpage are placeholders until public URLs are available.
+The Code button links to this repository. The Paper button remains a placeholder.
 
 ## Acknowledgments
 
