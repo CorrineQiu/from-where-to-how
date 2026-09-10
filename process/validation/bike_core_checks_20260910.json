@@ -1,0 +1,119 @@
+{
+  "material_passport": {
+    "origin_skill": "academic-research-suite/experiment-agent",
+    "origin_mode": "validate",
+    "origin_date": "2026-09-10T02:45:33.040978+00:00",
+    "verification_status": "VERIFIED",
+    "version_label": "process_core_subset_v1",
+    "scope": "Only the successful subset checks below; not end-to-end construction"
+  },
+  "checks": {
+    "chunks": {
+      "status": "PASS",
+      "source_samples": 3,
+      "rebuilt_chunks": 10,
+      "historical_comparison": "exact by sample ID (historical shard ordering ignored)",
+      "rerun_comparison": "exact",
+      "ids": [
+        "georgiatech_bike_16_10_15_0",
+        "georgiatech_bike_16_10_15_1",
+        "georgiatech_bike_16_10_15_2",
+        "georgiatech_bike_16_10_15_3",
+        "georgiatech_bike_16_10_16_0",
+        "georgiatech_bike_16_10_16_1",
+        "georgiatech_bike_16_10_16_2",
+        "georgiatech_bike_16_10_17_0",
+        "georgiatech_bike_16_10_17_1",
+        "georgiatech_bike_16_10_17_2"
+      ]
+    },
+    "cached_pose_reconstruction": {
+      "status": "PASS",
+      "samples": 3,
+      "valid_events": 22,
+      "device": "cpu",
+      "max_absolute_errors": {
+        "native_pelvis_m": 2.9802322387695312e-08,
+        "joints_cam_m": 9.5367431640625e-07,
+        "joints_f0_m": 6.556510925292969e-07,
+        "root_f0_m": 2.980232238769531e-07
+      },
+      "shared_f0_max_abs_m": 5.960464477539063e-08,
+      "tolerance_m": 5e-05,
+      "rerun_comparison": "exact array SHA-256",
+      "rerun_sha256": "31798e092ee155da4f915c4033e7ef618948e662269acba4a5b84d9e928bd390",
+      "scope": "Reconstruction from saved real Route-6 states; not full upstream attachment",
+      "historical_gpu_cpu_caveat": "Reconstruction comparison allows 0.05 mm numerical tolerance"
+    },
+    "synthetic_attachment_cli": {
+      "status": "PASS",
+      "input_kind": "Synthetic full-take and camera-chain records with user-supplied SMPL assets",
+      "cli_runs": 2,
+      "rerun_comparison": "exact dataset including NaN masks",
+      "history_pose_mask": [
+        1
+      ],
+      "target_pose_mask": [
+        1,
+        0,
+        0
+      ],
+      "target_pose_fail_code": [
+        0,
+        3,
+        1
+      ],
+      "deliberately_offset_loc_mm": 100.0,
+      "checked": [
+        "output cache and failure report",
+        "native pelvis",
+        "source-F0 anchor",
+        "failed-event and padding masks",
+        "no pose fitting to loc"
+      ],
+      "scope": "CLI integration only; not reconstruction of original WHAM/full-take input pairs"
+    }
+  },
+  "environment": {
+    "python": "3.9.7",
+    "numpy": "1.23.5",
+    "torch": "2.6.0+cu118",
+    "device": "cpu",
+    "threads": 4
+  },
+  "input_hashes": {
+    "loc_cache": {
+      "filename": "test_bike_F0norm.pkl",
+      "sha256": "c3c8fb956e946ba6cb70f2677761220d77b630d7f67f4d47ddc67e583ad472d0"
+    },
+    "chunk_cache": {
+      "filename": "test_bike_chunk4.pkl",
+      "sha256": "366a0cd0b8c5dd498da16381bffc4461afaa94a905c5d4af2ae381dd3aa06c05"
+    },
+    "pose_cache": {
+      "filename": "pose_bike_chunk4_test.pkl",
+      "sha256": "ee88589d8cb1db39b0ff911cea400159a2b0b9e439b22e61c001d3697bd67e1e"
+    },
+    "joint_regressor_path": {
+      "filename": "SMPL_to_J19.pkl",
+      "sha256": "a66e340412ebd320a5c694bee5fb2674f700736709bbdd93859e970f0e59f47c"
+    }
+  },
+  "model_asset_hashes": {
+    "SMPL_NEUTRAL.pkl": "98e65c74ad9b998783132f00880d1025a8d64b158e040e6ef13a557e5098bc42"
+  },
+  "code_hashes": {
+    "03_location_sequence_construction/build_interactions.py": "1ade717a71c042bb1d3febd05e203fd83017a7e6430becf2b6297e0e1f0d02e9",
+    "04_smpl_state_attachment/attach_smpl.py": "0cf4fffcb925d23091866c46f07e91fddde78c30b5b9f2ded1bc82c1bb5968ac",
+    "05_forecast_sample_generation/build_chunks.py": "11bbff4c7dbde04385429f7c27f476fdaf939626de0745299fc2888b31a7be8a"
+  },
+  "not_run": [
+    "Detic inference",
+    "Llama narration grounding",
+    "WHAM inference",
+    "Full source-event construction from raw upstream inputs",
+    "Full-take Route-6 attachment from original WHAM/full-take pairs",
+    "Video frame extraction",
+    "Full dataset regeneration"
+  ]
+}

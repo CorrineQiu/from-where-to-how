@@ -23,13 +23,13 @@ The [`data/`](data/README.md) directory contains the task and verb statistics us
 
 Open [`process/`](process/README.md) for the annotation pipeline figure and a step-by-step explanation:
 
-1. Scene Object Grounding
-2. Shared Coordinate Construction
-3. Location Sequence Construction
-4. SMPL State Attachment
-5. Forecast Sample Generation
+1. [Scene object grounding](process/01_scene_object_grounding/)
+2. [Shared coordinate construction](process/02_shared_coordinate_construction/)
+3. [Location sequence construction](process/03_location_sequence_construction/)
+4. [SMPL state attachment](process/04_smpl_state_attachment/)
+5. [Forecast sample generation](process/05_forecast_sample_generation/)
 
-The guide links the relevant upstream resources, including Ego-Exo4D, FIction, Detic, LVIS, Llama 3, WHAM, and SMPL. It distinguishes annotation construction from the Qwen3-VL and V-JEPA representations used for forecasting.
+Each step has its own guide. The construction scripts build continuous interaction sequences, form fixed-step chunks, and attach aligned SMPL states. The [pipeline overview](process/README.md) explains their execution order and links upstream tools. See the [construction validation](process/VALIDATION.md) for tested behavior and source provenance.
 
 ## Data and annotation files
 
@@ -44,7 +44,18 @@ The guide links the relevant upstream resources, including Ego-Exo4D, FIction, D
 │   └── dataset_narration_verb_stats.csv
 └── process/
     ├── README.md
-    └── annotation_pipeline.png
+    ├── annotation_pipeline.png
+    ├── 01_scene_object_grounding/
+    ├── 02_shared_coordinate_construction/
+    ├── 03_location_sequence_construction/
+    │   └── build_interactions.py
+    ├── 04_smpl_state_attachment/
+    │   └── attach_smpl.py
+    ├── 05_forecast_sample_generation/
+    │   └── build_chunks.py
+    ├── tests/
+    ├── requirements.txt
+    └── VALIDATION.md
 ```
 
 ## Acknowledgments

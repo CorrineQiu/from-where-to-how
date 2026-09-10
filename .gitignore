@@ -3,3 +3,9 @@ Thumbs.db
 *.zip
 PROJECT_PAGE_PREVIEW*.png
 github_pages_preview_*.png
+
+# Local construction inputs, outputs, and Python caches.
+/inputs/
+/work/
+/process/**/__pycache__/
+/process/**/*.pyc
