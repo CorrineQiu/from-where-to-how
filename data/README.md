@@ -1,46 +1,13 @@
-# Coherent4D data and annotations
+# Coherent4D statistics
 
-[Repository](../README.md) · [Construction pipeline](../process/README.md) · [Annotation field guide](ANNOTATION_GUIDE.md)
+Aggregate statistics used in the paper and dataset visualizations.
 
-This directory contains **aggregate metadata and annotation documentation**, not the full training dataset. Per-sample interaction and pose annotations, final take-level split manifests, model weights, and feature tensors are not included.
+| File | Contents |
+|---|---|
+| [dataset_statistics.csv](dataset_statistics.csv) | Sample splits, takes, future steps, valid targets, and object-label counts |
+| [dataset_task_sunburst_stats.csv](dataset_task_sunburst_stats.csv) | Sample and target counts for 21 procedural tasks |
+| [dataset_narration_verb_stats.csv](dataset_narration_verb_stats.csv) | Future-target frequencies by domain and narration verb |
 
-## Included files
+Future steps count interaction events; valid-target counts exclude padding. The 535 object labels are unique across domains. Percentage columns use dataset-wide totals.
 
-| File | Contents | Provenance |
-|---|---|---|
-| [dataset_statistics.csv](dataset_statistics.csv) | Domain horizons, sample split counts, takes, valid targets, and object-label counts | Table I of the supplied manuscript; counts also appear on the project page |
-| [dataset_task_sunburst_stats.csv](dataset_task_sunburst_stats.csv) | Counts for all 21 procedural tasks | Existing source CSV for the dataset distribution figure |
-| [dataset_narration_verb_stats.csv](dataset_narration_verb_stats.csv) | 619 domain–verb rows describing future-target verb frequencies | Existing source CSV for the narration verb distribution figure |
-| [ANNOTATION_GUIDE.md](ANNOTATION_GUIDE.md) | Meaning of the main annotation fields, coordinate conventions, timestamps, and masks | Manuscript and inspected local preprocessing interfaces |
-
-The two figure-source CSVs contain aggregate category counts and are copied without changing their contents. Original category spellings are retained for consistency with the figures.
-
-## Reading the metadata
-
-### Dataset statistics
-
-`dataset_statistics.csv` reports forecasting samples, not video frames. `valid_future_targets` excludes padded future steps. `future_steps` is the number of target events per sample, not a duration in seconds. The `Total` row has no single forecasting horizon.
-
-`interaction_object_labels` counts distinct labels within each domain. The overall 535 labels are a union across domains, not the sum of the three domain counts.
-
-### Task distribution
-
-- `domain`, `task_name`: the procedural domain and task label.
-- `chunk_sequences`: the number of forecasting samples for this task.
-- `percent_of_sequences`: the percentage of all 233,828 samples, not a within-domain percentage.
-- `valid_future_targets`: the number of valid future targets associated with those samples.
-- `unique_takes`: the number of source takes for that task.
-
-### Verb distribution
-
-- `domain`, `verb`: the domain and normalized first narration verb.
-- `future_targets`: the number of valid future targets associated with that verb.
-- `percent_of_future_targets`: the percentage of all 1,594,186 valid future targets, not a within-domain percentage.
-
-Percentages are rounded. The 619 rows count domain–verb combinations and should not be interpreted as 619 distinct verbs across the whole dataset.
-
-## Source data and models
-
-Coherent4D is constructed from [Ego-Exo4D](https://ego-exo4d-data.org/). Source videos, calibration, trajectories, point clouds, and annotations are available through the [official getting-started guide](https://docs.ego-exo4d-data.org/getting-started/).
-
-The [construction pipeline](../process/README.md) links the step-specific guides for WHAM, SMPL, and the other tools used in annotation construction.
+To construct the annotations, follow [Data preparation](../process/README.md).

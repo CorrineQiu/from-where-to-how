@@ -35,43 +35,11 @@ Coherent4D pairs continuous 3D interaction locations with temporally aligned ful
 
 The dataset reported in the manuscript covers 21 procedural tasks and 535 interaction-object labels, with 1,594,186 valid future targets.
 
-The [`data/`](data/README.md) directory contains the task and verb statistics used for the paper figures, the reported split counts, and an annotation field guide.
+The [`data/`](data/README.md) directory contains aggregate split, task, and verb statistics.
 
 ## Data construction
 
-Open [`process/`](process/README.md) for the annotation pipeline figure and a step-by-step explanation:
-
-1. [Scene object grounding](process/01_scene_object_grounding/)
-2. [Shared coordinate construction](process/02_shared_coordinate_construction/)
-3. [Location sequence construction](process/03_location_sequence_construction/)
-4. [SMPL state attachment](process/04_smpl_state_attachment/)
-5. [Forecast sample generation](process/05_forecast_sample_generation/)
-
-Each step has its own guide. The construction scripts build continuous interaction sequences, form fixed-step chunks, and attach aligned SMPL states. The [pipeline overview](process/README.md) explains their execution order and links upstream tools.
-
-## Data and annotation files
-
-```text
-.
-├── data/
-│   ├── README.md
-│   ├── ANNOTATION_GUIDE.md
-│   ├── dataset_statistics.csv
-│   ├── dataset_task_sunburst_stats.csv
-│   └── dataset_narration_verb_stats.csv
-└── process/
-    ├── README.md
-    ├── annotation_pipeline.png
-    ├── 01_scene_object_grounding/
-    ├── 02_shared_coordinate_construction/
-    ├── 03_location_sequence_construction/
-    │   └── build_interactions.py
-    ├── 04_smpl_state_attachment/
-    │   └── attach_smpl.py
-    ├── 05_forecast_sample_generation/
-    │   └── build_chunks.py
-    └── requirements.txt
-```
+Follow [Data preparation](process/README.md) to extract source annotations, construct shared coordinates and interaction sequences, generate forecasting samples, and attach SMPL poses. Each step includes the required tools, input/output files, and commands.
 
 ## Acknowledgments
 
