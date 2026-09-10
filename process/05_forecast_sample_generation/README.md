@@ -51,6 +51,4 @@ Incomplete tail chunks are padded, and their `target_mask` entries are zero. The
 
 ## Optional sharding
 
-Use `--num_shards N --shard_id i` to construct a shard, with `i` from zero to `N-1`. After all shards complete, run the same output path with `--merge_only 1 --num_shards N`. The default single-process command above is sufficient for a small validation run.
-
-See [VALIDATION.md](../VALIDATION.md) for tested chunk shapes, timestamps, masks, and source-equivalence checks.
+Use `--num_shards N --shard_id i` to construct a shard, with `i` from zero to `N-1`. After all shards complete, run the same output path with `--merge_only 1 --num_shards N`. Omit these options to use the single-process command above.

@@ -35,7 +35,7 @@ Coherent4D pairs continuous 3D interaction locations with temporally aligned ful
 
 The dataset reported in the manuscript covers 21 procedural tasks and 535 interaction-object labels, with 1,594,186 valid future targets.
 
-The [`data/`](data/README.md) directory contains the task and verb statistics used for the paper figures, the reported split counts, and an annotation field guide. See the [metadata validation notes](data/RELEASE_REVIEW.md) for validation details and annotation export requirements.
+The [`data/`](data/README.md) directory contains the task and verb statistics used for the paper figures, the reported split counts, and an annotation field guide.
 
 ## Data construction
 
@@ -47,7 +47,7 @@ Open [`process/`](process/README.md) for the annotation pipeline figure and a st
 4. [SMPL state attachment](process/04_smpl_state_attachment/)
 5. [Forecast sample generation](process/05_forecast_sample_generation/)
 
-Each step has its own guide. The construction scripts build continuous interaction sequences, form fixed-step chunks, and attach aligned SMPL states. The [pipeline overview](process/README.md) explains their execution order and links upstream tools. See the [construction validation](process/VALIDATION.md) for tested behavior and source provenance.
+Each step has its own guide. The construction scripts build continuous interaction sequences, form fixed-step chunks, and attach aligned SMPL states. The [pipeline overview](process/README.md) explains their execution order and links upstream tools.
 
 ## Data and annotation files
 
@@ -56,7 +56,6 @@ Each step has its own guide. The construction scripts build continuous interacti
 ├── data/
 │   ├── README.md
 │   ├── ANNOTATION_GUIDE.md
-│   ├── RELEASE_REVIEW.md
 │   ├── dataset_statistics.csv
 │   ├── dataset_task_sunburst_stats.csv
 │   └── dataset_narration_verb_stats.csv
@@ -71,9 +70,7 @@ Each step has its own guide. The construction scripts build continuous interacti
     │   └── attach_smpl.py
     ├── 05_forecast_sample_generation/
     │   └── build_chunks.py
-    ├── tests/
-    ├── requirements.txt
-    └── VALIDATION.md
+    └── requirements.txt
 ```
 
 ## Acknowledgments

@@ -10,7 +10,7 @@ Associate scene objects with semantic labels and continuous metric geometry. The
 
 **Inputs:** calibrated Aria views, the [LVIS vocabulary](https://www.lvisdataset.org/), and Ego-Exo4D SLAM resources including `semidense_points.csv.gz`, `semidense_observations.csv.gz`, and `online_calibration.jsonl`.
 
-**Output:** one `<take_name>_object_bbs_obb.pkl` file per take. The inspected intermediate contains:
+**Output:** one `<take_name>_object_bbs_obb.pkl` file per take, containing:
 
 | Field | Content |
 |---|---|
@@ -30,10 +30,6 @@ Follow the [FIction preparation guide](https://github.com/thechargedneutron/FIct
 4. Combine the object boxes with human and narration intermediates using the upstream `PuttingEverythingIn3D` preparation stage. The inspected assembly retains up to 30 objects ranked by supporting count.
 5. Pass the resulting scene-aligned take records to [location construction](../03_location_sequence_construction/). Box centers and orientations are then expressed in the common F0 frame.
 
-The upstream tools use their own detector checkpoints, environments, and input paths. This folder documents their data interface; it does not contain or claim a tested replacement for Detic inference and SLAM association. The historical custom scripts still need path configuration, and the full raw-video grounding stage was not rerun in the validation reported here.
-
-## Inspecting the object intermediate
-
-With the upstream output available, check that the number of names and counts equals the first dimension of `rrc`, corners are finite metric coordinates, and categories remain associated with the same boxes after filtering. Do not interpret box interiors or centers as measured hand–object surface contacts.
+Run detection and SLAM association with the linked upstream tools, configuring their checkpoints, environments, and input paths. This folder describes the resulting data interface consumed by the subsequent construction scripts.
 
 Continue with [shared coordinate construction](../02_shared_coordinate_construction/).

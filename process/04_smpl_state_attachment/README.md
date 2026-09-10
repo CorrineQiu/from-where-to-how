@@ -38,7 +38,7 @@ python process/04_smpl_state_attachment/attach_smpl.py \
   --device cpu
 ```
 
-For a small check, add `--take_name TAKE_NAME --max_chunks 2`. Change the input/output names to process Health and Cooking. CPU execution is supported; a CUDA device can be selected explicitly if desired.
+Add `--take_name TAKE_NAME` to process a single take. Change the input/output names to process Health and Cooking. CPU execution is supported; a CUDA device can be selected explicitly if desired.
 
 ## Alignment and attachment
 
@@ -66,5 +66,3 @@ The source builder records reconstruction, rigid-fit, and hand-location agreemen
 | `min_quality_weight` | 0.05 |
 
 These are annotation-quality settings, not a guarantee of exact hand–object contact. Keep the emitted configuration and diagnostics with generated annotations.
-
-See [VALIDATION.md](../VALIDATION.md) for the executed checks and the source intermediates required for a full reconstruction run.

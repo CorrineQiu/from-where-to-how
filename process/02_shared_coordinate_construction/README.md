@@ -42,14 +42,3 @@ After chunking, pose attachment uses `source_meta.source_observation_end_time_s`
 Pose attachment re-estimates F0 from the source pose stream at this inherited timestamp. Keep the interaction builder's `full_fps`, `last_sec_for_pose_avg`, and `pose_avg_win_frames` equal to the pose builder's `fps`, `last_sec`, and `win_frames`, respectively, and use the same `pos_scale_m` in both. Matching timestamps alone is insufficient if these settings or source geometry differ.
 
 WHAM's native world coordinates are not assumed to equal the scene frame. Pose attachment uses the available scene-aligned human vertices and the reconstructed SMPL surface to recover their rigid relationship before expressing the state in F0. Its alignment errors and quality fields should be inspected alongside the pose masks.
-
-## Checking a constructed sample
-
-Verify that:
-
-1. Source-reference metadata survives chunk generation.
-2. Pose attachment reports the same source-reference timestamp.
-3. A metric right-hand landmark transformed into F0 and divided by 5 agrees with its stored location, except for explicitly recorded clipping.
-4. Global components change frame together, while local body rotations retain their parent-relative definition.
-
-The numerical regression tests and real-intermediate checks are recorded in [VALIDATION.md](../VALIDATION.md).

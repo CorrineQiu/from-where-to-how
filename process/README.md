@@ -44,7 +44,7 @@ The three construction scripts are provided in steps 3, 5, and 4, respectively. 
 
 ## Running the construction scripts
 
-Run commands from the repository root. The inspected environment uses Python 3.9.7 with NumPy, pandas, tqdm, joblib, PyTorch, and SMPL-X. The pinned dependencies below target that environment, not arbitrary newer Python versions:
+Run commands from the repository root using Python 3.9. The dependency file includes NumPy, pandas, tqdm, joblib, PyTorch, and SMPL-X:
 
 ```bash
 python -m pip install -r process/requirements.txt
@@ -54,14 +54,6 @@ python process/04_smpl_state_attachment/attach_smpl.py --help
 ```
 
 Each executable step's README gives its full command and expected input layout. SMPL model files and the 19-joint regressor are supplied through explicit paths for pose attachment. Only load pickle intermediates from trusted sources.
-
-Run the construction tests with:
-
-```bash
-python -m unittest discover -s process/tests -v
-```
-
-See [validation and source provenance](VALIDATION.md) for the exact checks performed, source-script mapping, and what has not been rerun.
 
 ## Coordinate and timestamp conventions
 
