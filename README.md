@@ -1,13 +1,28 @@
-# From Where to How
+<h1 align="center">From Where to How: Continuous 4D Interaction Forecasting from Egocentric Video</h1>
 
-**From Where to How: Continuous 4D Interaction Forecasting from Egocentric Video**
+<p align="center">
+  <a href="mailto:qiaohuichu8599@gmail.com">Qiaohui Chu</a><sup>1,2</sup>,
+  Haoyu Zhang<sup>1,2</sup>,
+  Meng Liu<sup>3,*</sup>,
+  Haoxiang Shi<sup>1,2</sup>,
+  Dongmei Jiang<sup>2</sup>,
+  Liqiang Nie<sup>1,*</sup>
+</p>
 
-Coherent4D pairs continuous 3D interaction locations with temporally aligned full-body poses. HIGFlow models the corresponding forecasting problem as a cascaded *where-to-how* process.
+<p align="center">
+  <sup>1</sup> Harbin Institute of Technology (Shenzhen) &nbsp;&nbsp;
+  <sup>2</sup> Pengcheng Laboratory<br>
+  <sup>3</sup> Shandong University
+</p>
+
+<p align="center"><sup>*</sup> Corresponding authors</p>
 
 <p align="center">
   <a href="https://arxiv.org/abs/2609.08636"><img src="https://img.shields.io/badge/Paper-arXiv-B31B1B?style=flat&amp;logo=arxiv&amp;logoColor=white" alt="Paper on arXiv" height="28"></a>
   <a href="https://corrineqiu.github.io/from-where-to-how/"><img src="https://img.shields.io/badge/Project-From_Where_to_How-007EC6?style=flat" alt="From Where to How project page" height="28"></a>
 </p>
+
+Coherent4D pairs continuous 3D interaction locations with temporally aligned full-body poses. HIGFlow models the corresponding forecasting problem as a cascaded *where-to-how* process.
 
 ## Coherent4D dataset
 
