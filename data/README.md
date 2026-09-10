@@ -44,7 +44,7 @@ Percentages are rounded. The 619 rows count domain–verb combinations and shoul
 
 Coherent4D is constructed from [Ego-Exo4D](https://ego-exo4d-data.org/). Source videos, calibration, trajectories, point clouds, and annotations are available through the [official getting-started guide](https://docs.ego-exo4d-data.org/getting-started/).
 
-The [models and resources](../process/README.md#models-and-resources) section links WHAM, SMPL, and the other tools used in annotation construction.
+The [construction pipeline](../process/README.md) links the step-specific guides for WHAM, SMPL, and the other tools used in annotation construction.
 
 ## Annotation validation
 

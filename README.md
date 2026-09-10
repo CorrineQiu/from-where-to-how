@@ -4,7 +4,10 @@
 
 Coherent4D pairs continuous 3D interaction locations with temporally aligned full-body poses. HIGFlow models the corresponding forecasting problem as a cascaded *where-to-how* process.
 
-[Project page](https://corrineqiu.github.io/from-where-to-how/) · [Dataset metadata](data/README.md) · [Data construction](process/README.md) · [Annotation guide](data/ANNOTATION_GUIDE.md)
+<p align="center">
+  <a href="https://arxiv.org/abs/2609.08636"><img src="https://img.shields.io/badge/Paper-arXiv-B31B1B?style=flat&amp;logo=arxiv&amp;logoColor=white" alt="Paper on arXiv" height="28"></a>
+  <a href="https://corrineqiu.github.io/from-where-to-how/"><img src="https://img.shields.io/badge/Project-From_Where_to_How-007EC6?style=flat" alt="From Where to How project page" height="28"></a>
+</p>
 
 ## Coherent4D dataset
 
